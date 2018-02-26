@@ -60,7 +60,10 @@ package Grt.Vcd is
       Vcd_Bit, Vcd_Stdlogic,
 
       --  A bit vector type
-      Vcd_Bitvector, Vcd_Stdlogic_Vector
+      Vcd_Bitvector, Vcd_Stdlogic_Vector,
+
+      -- A Record type
+      Vcd_Record
      );
 
    subtype Vcd_Var_Vectors is Vcd_Var_Type

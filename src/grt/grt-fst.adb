@@ -234,7 +234,7 @@ package body Grt.Fst is
       Get_Verilog_Wire (Sig, Vcd_El);
 
       case Vcd_El.Vtype is
-         when Vcd_Bad =>
+         when Vcd_Bad | Vcd_Record =>
             --  Not handled.
             return;
          when Vcd_Enum8 =>
@@ -611,7 +611,7 @@ package body Grt.Fst is
             null;
          when Vcd_Enum8 =>
             Fst_Put_Enum8 (Hand, Verilog_Wire_Val (V.Wire).E8, V.Wire.Rti);
-         when Vcd_Bad =>
+         when Vcd_Bad | Vcd_Record =>
             null;
       end case;
    end Fst_Put_Var;

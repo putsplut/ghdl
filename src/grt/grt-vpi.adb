@@ -437,6 +437,8 @@ package body Grt.Vpi is
             return 8;
          when Vcd_Float64 =>
             return 0;
+         when Vcd_Record =>
+            return 0;
          when Vcd_Bad =>
             return 0;
       end case;
@@ -458,7 +460,8 @@ package body Grt.Vpi is
          when Vcd_Bitvector
            | Vcd_Stdlogic_Vector =>
             return True;
-         when Vcd_Bad =>
+         when Vcd_Bad
+           | Vcd_Record =>
             return False;
       end case;
    end Vpi_Get_Vector;
@@ -518,6 +521,9 @@ package body Grt.Vpi is
                Info : Verilog_Wire_Info;
             begin
                Get_Verilog_Wire (Res, Info);
+               if Info.Vtype = Vcd_Record then
+                 return vpiStructNet;
+               end if;
                if Info.Vtype /= Vcd_Bad then
                   return vpiNet;
                end if;
@@ -549,6 +555,9 @@ package body Grt.Vpi is
                                          Ref => Res);
          when vpiParameter =>
             return new struct_vpiHandle'(mType => vpiParameter,
+                                         Ref => Res);
+         when vpiStructNet =>
+            return new struct_vpiHandle'(mType => vpiStructNet,
                                          Ref => Res);
          when others =>
             return null;
@@ -804,6 +813,7 @@ package body Grt.Vpi is
       case Info.Vtype is
          when Vcd_Bad
            | Vcd_Enum8
+           | Vcd_Record
            | Vcd_Float64 =>
             return null;
          when Vcd_Integer32 =>
@@ -913,7 +923,8 @@ package body Grt.Vpi is
                                Vec : Std_Ulogic_Array) is
    begin
       case Info.Vtype is
-         when Vcd_Bad =>
+         when Vcd_Bad
+           | Vcd_Record =>
             return;
          when Vcd_Bit
            | Vcd_Bool
@@ -1407,9 +1418,24 @@ package body Grt.Vpi is
    function vpi_handle_by_index (aRef: vpiHandle; aIndex: integer)
                                 return vpiHandle
    is
-      pragma Unreferenced (aRef);
+      --pragma Unreferenced (aRef);
       pragma Unreferenced (aIndex);
+      Info : Verilog_Wire_Info;
+      Res : VhpiHandleT;
+      Error : AvhpiErrorT;
    begin
+      Get_Verilog_Wire (aRef.Ref, Info);
+      Vhpi_Handle(VhpiBaseType, aRef.Ref, Res, Error);
+      Vhpi_Handle_By_Index(VhpiIndexedNames,  aRef.Ref, aIndex, Res, Error);
+      --case Info.Val is
+      --   when Vcd_Effective =>
+      --      return To_Signal_Arr_Ptr (Info.Ptr)(Idx).Value_Ptr;
+      --   when Vcd_Driving =>
+      --      return To_Signal_Arr_Ptr (Info.Ptr)(Idx).Driving_Value'Access;
+      --   when Vcd_Variable =>
+      --      --  TODO
+      --      Internal_Error ("verilog_wire_val");
+      --end case;
       if Flag_Trace then
          Trace_Start ("vpi_handle_by_index UNIMPLEMENTED!");
          Trace_Newline;

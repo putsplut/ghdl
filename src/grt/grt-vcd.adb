@@ -374,6 +374,9 @@ package body Grt.Vcd is
                Kind := Rti_To_Vcd_Kind (Arr_Rti);
                Extract_Range (Bounds, Idx_Rti, Irange);
             end;
+         when Ghdl_Rtik_Type_Record =>
+            Kind := Vcd_Record;
+            Irange := null;
          when others =>
             Kind := Vcd_Bad;
       end case;
@@ -428,6 +431,8 @@ package body Grt.Vcd is
             Info := (Vcd_Bitvector, Val, Sig_Addr, Irange);
          when Vcd_Stdlogic_Vector =>
             Info := (Vcd_Stdlogic_Vector, Val, Sig_Addr, Irange);
+         when Vcd_Record =>
+            Info := (Vcd_Record, Val, Sig_Addr);
       end case;
    end Get_Verilog_Wire;
 
@@ -505,6 +510,7 @@ package body Grt.Vcd is
                Vcd_Put ("reg ");
                Vcd_Put_I32 (Ghdl_I32 (Vcd_El.Irange.I32.Len));
             when Vcd_Bad
+              | Vcd_Record
               | Vcd_Enum8 =>
                null;
          end case;
@@ -719,6 +725,7 @@ package body Grt.Vcd is
             end loop;
             Vcd_Putc (' ');
          when Vcd_Bad
+           | Vcd_Record
            | Vcd_Enum8 =>
             null;
       end case;
@@ -748,7 +755,8 @@ package body Grt.Vcd is
                         return True;
                      end if;
                   end loop;
-               when Vcd_Bad =>
+               when Vcd_Bad
+                  | Vcd_Record =>
                   null;
             end case;
          when Vcd_Driving =>
@@ -769,7 +777,8 @@ package body Grt.Vcd is
                         return True;
                      end if;
                   end loop;
-               when Vcd_Bad =>
+               when Vcd_Bad
+                  | Vcd_Record =>
                   null;
             end case;
       end case;
@@ -795,7 +804,8 @@ package body Grt.Vcd is
                   return True;
                end if;
             end loop;
-         when Vcd_Bad =>
+         when Vcd_Bad
+            | Vcd_Record =>
             null;
       end case;
       return False;

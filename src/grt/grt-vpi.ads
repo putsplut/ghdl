@@ -49,6 +49,8 @@ package Grt.Vpi is
    vpiRightRange:    constant integer := 83;
    vpiScope:         constant integer := 84;
    vpiInternalScope: constant integer := 92;
+   -- object codes, From sv_vpi_user.h
+   vpiStructNet:     constant integer := 683;
 
    vpiStop   : constant := 66;
    vpiFinish : constant := 67;

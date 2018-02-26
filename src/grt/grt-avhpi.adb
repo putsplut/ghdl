@@ -1038,7 +1038,17 @@ package body Grt.Avhpi is
                      end;
                   end if;
                when others =>
-                  return;
+                  declare
+                     Sig_Type : VhpiHandleT;
+                     Sig_Type2 : VhpiHandleT;
+                  begin
+                     Vhpi_Handle(VhpiSubtype, Ref, Sig_Type, Error);
+                     if Sig_Type.Kind = VhpiSubtypeIndicK then
+                       Vhpi_Handle_By_Index(VhpiConstraints, Sig_type, Index, Res, Error);
+                     end if;
+                     Vhpi_Handle(VhpiBaseType, Sig_Type, Sig_Type2, Error);
+                     return;
+                  end;
             end case;
          when VhpiIndexedNames =>
             declare

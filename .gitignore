@@ -37,3 +37,4 @@ run-bind.adb
 run-bind.ads
 src/version.ads
 doc/_build/
+*.sw?
