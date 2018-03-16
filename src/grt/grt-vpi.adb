@@ -434,7 +434,7 @@ package body Grt.Vpi is
          when Vcd_Integer32 =>
             return 32;
          when Vcd_Enum8 =>
-            return 8;
+            return 1;
          when Vcd_Float64 =>
             return 0;
          when Vcd_Record =>
@@ -795,6 +795,8 @@ package body Grt.Vpi is
          when VhpiPortDeclK
            | VhpiSigDeclK
            | VhpiGenericDeclK =>
+            null;
+         when VhpiIndexedNameK =>
             null;
          when others =>
             return null;
@@ -1418,30 +1420,22 @@ package body Grt.Vpi is
    function vpi_handle_by_index (aRef: vpiHandle; aIndex: integer)
                                 return vpiHandle
    is
-      --pragma Unreferenced (aRef);
-      pragma Unreferenced (aIndex);
-      Info : Verilog_Wire_Info;
       Res : VhpiHandleT;
       Error : AvhpiErrorT;
+      handle : vpiHandle;
    begin
-      Get_Verilog_Wire (aRef.Ref, Info);
-      Vhpi_Handle(VhpiBaseType, aRef.Ref, Res, Error);
       Vhpi_Handle_By_Index(VhpiIndexedNames,  aRef.Ref, aIndex, Res, Error);
-      --case Info.Val is
-      --   when Vcd_Effective =>
-      --      return To_Signal_Arr_Ptr (Info.Ptr)(Idx).Value_Ptr;
-      --   when Vcd_Driving =>
-      --      return To_Signal_Arr_Ptr (Info.Ptr)(Idx).Driving_Value'Access;
-      --   when Vcd_Variable =>
-      --      --  TODO
-      --      Internal_Error ("verilog_wire_val");
-      --end case;
+      if Error /= AvhpiErrorOk then
+        return handle;
+      end if;
+      handle := Build_vpiHandle(Res, vpiNet);
+
       if Flag_Trace then
-         Trace_Start ("vpi_handle_by_index UNIMPLEMENTED!");
+         Trace_Start ("vpi_handle_by_index");
          Trace_Newline;
       end if;
 
-      return null;
+      return handle;
    end vpi_handle_by_index;
 
    --  Return True iff L and R are equal.  L must not have an element set to

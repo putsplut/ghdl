@@ -184,6 +184,8 @@ package body Grt.Avhpi is
       case Obj_Rti.Common.Kind is
          when Ghdl_Rtik_Generic =>
             Is_Sig := False;
+         when Ghdl_Rtik_Port =>
+            Is_Sig := True; -- Is this correct?
          when others =>
             Internal_Error ("add_index");
       end case;
@@ -200,6 +202,12 @@ package body Grt.Avhpi is
                El_Size := Address'Size / Storage_Unit;
             else
                El_Size := Ghdl_I64'Size / Storage_Unit;
+            end if;
+         when Ghdl_Rtik_Type_e8 =>
+            if Is_Sig then
+               El_Size := Address'Size / Storage_Unit;
+            else
+               El_Size := Ghdl_E8'Size / Storage_Unit;
             end if;
          when Ghdl_Rtik_Subtype_Array =>
             if Is_Sig then
@@ -904,6 +912,11 @@ package body Grt.Avhpi is
                           Ctxt => Ref.Ctxt,
                           Atype => Ref.Obj.Obj_Type);
                   Error := AvhpiErrorOk;
+               when VhpiIndexedNameK =>
+                  Res := (Kind => VhpiSubtypeIndicK,
+                          Ctxt => Ref.Ctxt,
+                          Atype => Ref.N_Type);
+                  Error := AvhpiErrorOk;
                when others =>
                   return;
             end case;
@@ -932,6 +945,8 @@ package body Grt.Avhpi is
                      Atype := Ref.Obj.Obj_Type;
                   when VhpiIndexedNameK =>
                      Atype := Ref.N_Type;
+                  when VhpiPortDeclK =>
+                     Atype := Ref.Obj.Obj_Type;
                   when others =>
                      return;
                end case;
@@ -1247,6 +1262,8 @@ package body Grt.Avhpi is
             return Loc_To_Addr (Obj.Ctxt.Block.Depth,
                                 Obj.Obj.Loc,
                                 Obj.Ctxt);
+         when VhpiIndexedNameK =>
+            return Obj.N_Addr;
          when others =>
             return Null_Address;
       end case;

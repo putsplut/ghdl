@@ -406,6 +406,10 @@ package body Grt.Vcd is
             Val := Vcd_Effective;
          when VhpiGenericDeclK =>
             Val := Vcd_Variable;
+         when VhpiIndexedNameK =>
+            -- Is this correct? Seems like it depends on next layer up.
+            --Val := Vcd_Effective;
+            Val := Vcd_Driving;
          when others =>
             Info := (Vtype => Vcd_Bad,
                      Val => Vcd_Effective, Ptr => Null_Address);
