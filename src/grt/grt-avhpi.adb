@@ -184,7 +184,8 @@ package body Grt.Avhpi is
       case Obj_Rti.Common.Kind is
          when Ghdl_Rtik_Generic =>
             Is_Sig := False;
-         when Ghdl_Rtik_Port =>
+         when Ghdl_Rtik_Port 
+            | Ghdl_Rtik_Signal =>
             Is_Sig := True; -- Is this correct?
          when others =>
             Internal_Error ("add_index");
@@ -945,7 +946,8 @@ package body Grt.Avhpi is
                      Atype := Ref.Obj.Obj_Type;
                   when VhpiIndexedNameK =>
                      Atype := Ref.N_Type;
-                  when VhpiPortDeclK =>
+                  when VhpiPortDeclK
+                    | VhpiSigDeclK =>
                      Atype := Ref.Obj.Obj_Type;
                   when others =>
                      return;

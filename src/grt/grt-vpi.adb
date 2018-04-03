@@ -1423,8 +1423,26 @@ package body Grt.Vpi is
       Res : VhpiHandleT;
       Error : AvhpiErrorT;
       handle : vpiHandle;
+      Info : Verilog_Wire_Info;
+      left, right : Integer;
+      idx : Integer;
    begin
-      Vhpi_Handle_By_Index(VhpiIndexedNames,  aRef.Ref, aIndex, Res, Error);
+      Get_Verilog_Wire (aRef.Ref, Info);
+      left := Integer(Info.Irange.I32.Left);
+      right := Integer(Info.Irange.I32.Right);
+      if left > right then
+        idx := left - aIndex;
+        if (aIndex > left) or (aIndex < right) then
+          return handle;
+        end if;
+      else
+        idx := aIndex - left;
+        if (aIndex > right) or (aIndex < left) then
+          return handle;
+        end if;
+      end if;
+      
+      Vhpi_Handle_By_Index(VhpiIndexedNames,  aRef.Ref, idx, Res, Error);
       if Error /= AvhpiErrorOk then
         return handle;
       end if;
