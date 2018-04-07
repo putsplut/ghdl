@@ -1,0 +1,2 @@
+# Assumes executable compiled as coco_test, sitting one level up.
+COCOTB_LOG_LEVEL=DEBUG LANG=vhdl LD_LIBRARY_PATH=/home/putsplut/repos/cocotb/build/libs/x86_64/ MODULE=test SIM=ghdl COCOTB_PATH=/home/putsplut/repos/cocotb/ PYTHONPATH=/home/putsplut/repos/cocotb/:/home/putsplut/repos/cocotb/build/libs/x86_64/:. ../coco_test --vpi=/home/putsplut/repos/cocotb/build/libs/x86_64/libvpi.so

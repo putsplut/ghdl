@@ -1,0 +1,453 @@
+AMAP: Error: Specified /aha/users/j6013/coco_testing/arrays_and_records/latched_vhdl file doesn't exist.
+# Aldec, Inc. Riviera-PRO version 2016.02.81.6077 built for Linux64 on February 18, 2016.
+# HDL, SystemC, and Assertions simulator, debugger, and design environment.
+# (c) 1999-2016 Aldec, Inc. All rights reserved.
+vsim -lib work +access -w -O2 -dbg -ieee_nowarn -t 1ps -loadvhpi /aha/tools/potential/cocotb-20180328/build/libs/Linux-x86_64/libvhpi:vhpi_startup_routines_bootstrap aldec_lib.coco_test rtl
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: PLI/VHPI kernel's engine initialization done.
+# PLI: Loading library '/aha/tools/aldec/riviera-2016.02/bin/libsystf.so'
+# VHPI: Loading library '/aha/tools/potential/cocotb-20180328/build/libs/Linux-x86_64/libvhpi.so'
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6565 kB (elbread=1450 elab2=4955 kernel=158 sdf=0)
+# KERNEL: ASDB file was created in location /aha/users/j6013/coco_testing/arrays_and_records/proto/dataset.asdb
+run -all
+     -.--ns INFO     cocotb.gpi                                GpiCommon.cpp:91   in gpi_print_registered_impl       VHPI registered
+  0.00ns INFO     cocotb.gpi                                  gpi_embed.c:248  in embed_sim_init                  Running on Riviera-PRO version 2016.02.81.6077
+  0.00ns INFO     cocotb.gpi                                  gpi_embed.c:249  in embed_sim_init                  Python interpreter initialised and cocotb loaded!
+  0.00ns INFO     cocotb                                      __init__.py:112  in _initialise_testbench           Unable to determine Cocotb version from Unknown
+  0.00ns INFO     cocotb                                      __init__.py:134  in _initialise_testbench           Seeding Python random module with supplied seed -2772715656300702398
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:227  in gpi_get_root_handle             Looking for root handle 'coco_test' over 1 impls
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:771  in get_root_handle                 VHPI: We have found root=':'
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test of type 2 (vhpiCompInstStmtK)
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:235  in gpi_get_root_handle             Got a Root handle (coco_test) back from VHPI
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test exists
+  0.00ns DEBUG    cocotb.coco_test                              handle.py:92   in __init__                        Created
+  0.00ns INFO     cocotb.regression                         regression.py:167  in initialise                      Found test test.proto
+  0.00ns INFO     cocotb.regression                         regression.py:287  in execute                         Running test 1/1: proto
+  0.00ns INFO     ..tb.coroutine.proto.0x7f26ad6da850       decorators.py:191  in send                            Starting test: "proto"
+                                                                                                                  Description: None
+  0.00ns DEBUG    ..tb.coroutine.proto.0x7f26ad6da850       decorators.py:196  in send                            Sending trigger None
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:256  in __gpi_get_handle_by_name        Searching for stl_in
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:269  in __gpi_get_handle_by_name        Checking if stl_in native though impl VHPI
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:285  in create_gpi_obj_from_handle      Detected a LOGIC VECTOR type coco_test.stl_in
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:stl_in of type 5 (vhpiArrayTypeDeclK)
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:279  in __gpi_get_handle_by_name        Found stl_in via VHPI
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.stl_in exists
+  0.00ns DEBUG    cocotb.stl_in                                 handle.py:92   in __init__                        Created
+  0.00ns DEBUG    cocotb.gpi                                  gpi_embed.c:298  in embed_sim_init                  _initialise_testbench successful
+  0.00ns DEBUG    cocotb.gpi                                 GpiCbHdl.cpp:126  in run_callback                    Generic run_callback
+  0.00ns DEBUG    ..tb.coroutine.proto.0x7f26ad6da850       decorators.py:196  in send                            Sending trigger Timer(1.00ps)
+stl_in
+   UUUUUUUU
+  0.00ns DEBUG    cocotb.gpi                                 GpiCbHdl.cpp:128  in run_callback                    Generic run_callback done
+  0.00ns DEBUG    cocotb.gpi                                 GpiCbHdl.cpp:126  in run_callback                    Generic run_callback
+  0.00ns DEBUG    cocotb.gpi                                 GpiCbHdl.cpp:128  in run_callback                    Generic run_callback done
+  0.00ns DEBUG    cocotb.gpi                                 GpiCbHdl.cpp:126  in run_callback                    Generic run_callback
+  0.00ns DEBUG    ..tb.coroutine.proto.0x7f26ad6da850       decorators.py:196  in send                            Sending trigger Timer(1.00ps)
+[After another yield]
+   10100110
+   0xa6
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:347  in gpi_get_handle_by_index         Checking if index 8 native though impl VHPI 
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:553  in native_check_create             Native check create for index 8 of parent coco_test.stl_in (vhpiPortDeclK)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:731  in native_check_create             Index (8->0) found stl_in(8) (vhpiIndexedNameK)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:308  in create_gpi_obj_from_handle      Detected a LOGIC type coco_test.stl_in(8)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:stl_in(8) of type 5 (vhpiEnumTypeDeclK)
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.stl_in(8) exists
+  0.00ns DEBUG    cocotb.stl_in(8)                              handle.py:92   in __init__                        Created
+  8 -> 1
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:347  in gpi_get_handle_by_index         Checking if index 7 native though impl VHPI 
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:553  in native_check_create             Native check create for index 7 of parent coco_test.stl_in (vhpiPortDeclK)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:731  in native_check_create             Index (7->1) found stl_in(7) (vhpiIndexedNameK)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:308  in create_gpi_obj_from_handle      Detected a LOGIC type coco_test.stl_in(7)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:stl_in(7) of type 5 (vhpiEnumTypeDeclK)
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.stl_in(7) exists
+  0.00ns DEBUG    cocotb.stl_in(7)                              handle.py:92   in __init__                        Created
+  7 -> 0
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:347  in gpi_get_handle_by_index         Checking if index 6 native though impl VHPI 
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:553  in native_check_create             Native check create for index 6 of parent coco_test.stl_in (vhpiPortDeclK)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:731  in native_check_create             Index (6->2) found stl_in(6) (vhpiIndexedNameK)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:308  in create_gpi_obj_from_handle      Detected a LOGIC type coco_test.stl_in(6)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:stl_in(6) of type 5 (vhpiEnumTypeDeclK)
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.stl_in(6) exists
+  0.00ns DEBUG    cocotb.stl_in(6)                              handle.py:92   in __init__                        Created
+  6 -> 1
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:347  in gpi_get_handle_by_index         Checking if index 5 native though impl VHPI 
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:553  in native_check_create             Native check create for index 5 of parent coco_test.stl_in (vhpiPortDeclK)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:731  in native_check_create             Index (5->3) found stl_in(5) (vhpiIndexedNameK)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:308  in create_gpi_obj_from_handle      Detected a LOGIC type coco_test.stl_in(5)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:stl_in(5) of type 5 (vhpiEnumTypeDeclK)
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.stl_in(5) exists
+  0.00ns DEBUG    cocotb.stl_in(5)                              handle.py:92   in __init__                        Created
+  5 -> 0
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:347  in gpi_get_handle_by_index         Checking if index 4 native though impl VHPI 
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:553  in native_check_create             Native check create for index 4 of parent coco_test.stl_in (vhpiPortDeclK)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:731  in native_check_create             Index (4->4) found stl_in(4) (vhpiIndexedNameK)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:308  in create_gpi_obj_from_handle      Detected a LOGIC type coco_test.stl_in(4)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:stl_in(4) of type 5 (vhpiEnumTypeDeclK)
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.stl_in(4) exists
+  0.00ns DEBUG    cocotb.stl_in(4)                              handle.py:92   in __init__                        Created
+  4 -> 0
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:347  in gpi_get_handle_by_index         Checking if index 3 native though impl VHPI 
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:553  in native_check_create             Native check create for index 3 of parent coco_test.stl_in (vhpiPortDeclK)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:731  in native_check_create             Index (3->5) found stl_in(3) (vhpiIndexedNameK)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:308  in create_gpi_obj_from_handle      Detected a LOGIC type coco_test.stl_in(3)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:stl_in(3) of type 5 (vhpiEnumTypeDeclK)
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.stl_in(3) exists
+  0.00ns DEBUG    cocotb.stl_in(3)                              handle.py:92   in __init__                        Created
+  3 -> 1
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:347  in gpi_get_handle_by_index         Checking if index 2 native though impl VHPI 
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:553  in native_check_create             Native check create for index 2 of parent coco_test.stl_in (vhpiPortDeclK)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:731  in native_check_create             Index (2->6) found stl_in(2) (vhpiIndexedNameK)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:308  in create_gpi_obj_from_handle      Detected a LOGIC type coco_test.stl_in(2)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:stl_in(2) of type 5 (vhpiEnumTypeDeclK)
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.stl_in(2) exists
+  0.00ns DEBUG    cocotb.stl_in(2)                              handle.py:92   in __init__                        Created
+  2 -> 1
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:347  in gpi_get_handle_by_index         Checking if index 1 native though impl VHPI 
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:553  in native_check_create             Native check create for index 1 of parent coco_test.stl_in (vhpiPortDeclK)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:731  in native_check_create             Index (1->7) found stl_in(1) (vhpiIndexedNameK)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:308  in create_gpi_obj_from_handle      Detected a LOGIC type coco_test.stl_in(1)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:stl_in(1) of type 5 (vhpiEnumTypeDeclK)
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.stl_in(1) exists
+  0.00ns DEBUG    cocotb.stl_in(1)                              handle.py:92   in __init__                        Created
+  1 -> 0
+
+  0.00ns DEBUG    cocotb.gpi                                 GpiCbHdl.cpp:128  in run_callback                    Generic run_callback done
+  0.00ns DEBUG    cocotb.gpi                                 GpiCbHdl.cpp:126  in run_callback                    Generic run_callback
+  0.00ns DEBUG    ..tb.coroutine.proto.0x7f26ad6da850       decorators.py:196  in send                            Sending trigger Timer(1.00ps)
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:256  in __gpi_get_handle_by_name        Searching for stl_out
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:269  in __gpi_get_handle_by_name        Checking if stl_out native though impl VHPI
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:285  in create_gpi_obj_from_handle      Detected a LOGIC VECTOR type coco_test.stl_out
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:stl_out of type 5 (vhpiArrayTypeDeclK)
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:279  in __gpi_get_handle_by_name        Found stl_out via VHPI
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.stl_out exists
+  0.00ns DEBUG    cocotb.stl_out                                handle.py:92   in __init__                        Created
+stl_out
+   10100110
+   0xa6
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:347  in gpi_get_handle_by_index         Checking if index 0 native though impl VHPI 
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:553  in native_check_create             Native check create for index 0 of parent coco_test.stl_out (vhpiPortDeclK)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:731  in native_check_create             Index (0->0) found stl_out(0) (vhpiIndexedNameK)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:308  in create_gpi_obj_from_handle      Detected a LOGIC type coco_test.stl_out(0)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:stl_out(0) of type 5 (vhpiEnumTypeDeclK)
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.stl_out(0) exists
+  0.00ns DEBUG    cocotb.stl_out(0)                             handle.py:92   in __init__                        Created
+  0 -> 1 stl_out(0)
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:347  in gpi_get_handle_by_index         Checking if index 1 native though impl VHPI 
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:553  in native_check_create             Native check create for index 1 of parent coco_test.stl_out (vhpiPortDeclK)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:731  in native_check_create             Index (1->1) found stl_out(1) (vhpiIndexedNameK)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:308  in create_gpi_obj_from_handle      Detected a LOGIC type coco_test.stl_out(1)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:stl_out(1) of type 5 (vhpiEnumTypeDeclK)
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.stl_out(1) exists
+  0.00ns DEBUG    cocotb.stl_out(1)                             handle.py:92   in __init__                        Created
+  1 -> 0 stl_out(1)
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:347  in gpi_get_handle_by_index         Checking if index 2 native though impl VHPI 
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:553  in native_check_create             Native check create for index 2 of parent coco_test.stl_out (vhpiPortDeclK)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:731  in native_check_create             Index (2->2) found stl_out(2) (vhpiIndexedNameK)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:308  in create_gpi_obj_from_handle      Detected a LOGIC type coco_test.stl_out(2)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:stl_out(2) of type 5 (vhpiEnumTypeDeclK)
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.stl_out(2) exists
+  0.00ns DEBUG    cocotb.stl_out(2)                             handle.py:92   in __init__                        Created
+  2 -> 1 stl_out(2)
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:347  in gpi_get_handle_by_index         Checking if index 3 native though impl VHPI 
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:553  in native_check_create             Native check create for index 3 of parent coco_test.stl_out (vhpiPortDeclK)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:731  in native_check_create             Index (3->3) found stl_out(3) (vhpiIndexedNameK)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:308  in create_gpi_obj_from_handle      Detected a LOGIC type coco_test.stl_out(3)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:stl_out(3) of type 5 (vhpiEnumTypeDeclK)
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.stl_out(3) exists
+  0.00ns DEBUG    cocotb.stl_out(3)                             handle.py:92   in __init__                        Created
+  3 -> 0 stl_out(3)
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:347  in gpi_get_handle_by_index         Checking if index 4 native though impl VHPI 
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:553  in native_check_create             Native check create for index 4 of parent coco_test.stl_out (vhpiPortDeclK)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:731  in native_check_create             Index (4->4) found stl_out(4) (vhpiIndexedNameK)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:308  in create_gpi_obj_from_handle      Detected a LOGIC type coco_test.stl_out(4)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:stl_out(4) of type 5 (vhpiEnumTypeDeclK)
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.stl_out(4) exists
+  0.00ns DEBUG    cocotb.stl_out(4)                             handle.py:92   in __init__                        Created
+  4 -> 0 stl_out(4)
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:347  in gpi_get_handle_by_index         Checking if index 5 native though impl VHPI 
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:553  in native_check_create             Native check create for index 5 of parent coco_test.stl_out (vhpiPortDeclK)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:731  in native_check_create             Index (5->5) found stl_out(5) (vhpiIndexedNameK)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:308  in create_gpi_obj_from_handle      Detected a LOGIC type coco_test.stl_out(5)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:stl_out(5) of type 5 (vhpiEnumTypeDeclK)
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.stl_out(5) exists
+  0.00ns DEBUG    cocotb.stl_out(5)                             handle.py:92   in __init__                        Created
+  5 -> 1 stl_out(5)
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:347  in gpi_get_handle_by_index         Checking if index 6 native though impl VHPI 
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:553  in native_check_create             Native check create for index 6 of parent coco_test.stl_out (vhpiPortDeclK)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:731  in native_check_create             Index (6->6) found stl_out(6) (vhpiIndexedNameK)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:308  in create_gpi_obj_from_handle      Detected a LOGIC type coco_test.stl_out(6)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:stl_out(6) of type 5 (vhpiEnumTypeDeclK)
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.stl_out(6) exists
+  0.00ns DEBUG    cocotb.stl_out(6)                             handle.py:92   in __init__                        Created
+  6 -> 1 stl_out(6)
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:347  in gpi_get_handle_by_index         Checking if index 7 native though impl VHPI 
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:553  in native_check_create             Native check create for index 7 of parent coco_test.stl_out (vhpiPortDeclK)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:731  in native_check_create             Index (7->7) found stl_out(7) (vhpiIndexedNameK)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:308  in create_gpi_obj_from_handle      Detected a LOGIC type coco_test.stl_out(7)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:stl_out(7) of type 5 (vhpiEnumTypeDeclK)
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.stl_out(7) exists
+  0.00ns DEBUG    cocotb.stl_out(7)                             handle.py:92   in __init__                        Created
+  7 -> 0 stl_out(7)
+
+[Before Set]
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:256  in __gpi_get_handle_by_name        Searching for foo_in
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:269  in __gpi_get_handle_by_name        Checking if foo_in native though impl VHPI
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:336  in create_gpi_obj_from_handle      Detected a STRUCTURE type coco_test.foo_in
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:foo_in of type 8 (vhpiRecordTypeDeclK)
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:279  in __gpi_get_handle_by_name        Found foo_in via VHPI
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.foo_in exists
+  0.00ns DEBUG    cocotb.foo_in                                 handle.py:92   in __init__                        Created
+coco_test.foo_in
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:256  in __gpi_get_handle_by_name        Searching for a
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:269  in __gpi_get_handle_by_name        Checking if a native though impl VHPI
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:285  in create_gpi_obj_from_handle      Detected a LOGIC VECTOR type coco_test.foo_in.a
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:foo_in.a of type 5 (vhpiArrayTypeDeclK)
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:279  in __gpi_get_handle_by_name        Found a via VHPI
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.foo_in.a exists
+  0.00ns DEBUG    cocotb.a                                      handle.py:92   in __init__                        Created
+UUUUU
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:347  in gpi_get_handle_by_index         Checking if index 3 native though impl VHPI 
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:553  in native_check_create             Native check create for index 3 of parent coco_test.foo_in.a (vhpiSelectedNameK)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:731  in native_check_create             Index (3->4) found foo_in.a(3) (vhpiIndexedNameK)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:308  in create_gpi_obj_from_handle      Detected a LOGIC type coco_test.foo_in.a(3)
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:foo_in.a(3) of type 5 (vhpiEnumTypeDeclK)
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.foo_in.a(3) exists
+  0.00ns DEBUG    cocotb.a(3)                                   handle.py:92   in __init__                        Created
+U
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:256  in __gpi_get_handle_by_name        Searching for b
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:269  in __gpi_get_handle_by_name        Checking if b native though impl VHPI
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:285  in create_gpi_obj_from_handle      Detected a LOGIC VECTOR type coco_test.foo_in.b
+  0.00ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:foo_in.b of type 5 (vhpiArrayTypeDeclK)
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:279  in __gpi_get_handle_by_name        Found b via VHPI
+  0.00ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.foo_in.b exists
+  0.00ns DEBUG    cocotb.b                                      handle.py:92   in __init__                        Created
+  0.00ns DEBUG    cocotb.gpi                                 GpiCbHdl.cpp:128  in run_callback                    Generic run_callback done
+  0.00ns DEBUG    cocotb.gpi                                 GpiCbHdl.cpp:126  in run_callback                    Generic run_callback
+  0.00ns DEBUG    cocotb.gpi                                 GpiCbHdl.cpp:128  in run_callback                    Generic run_callback done
+  0.00ns DEBUG    cocotb.gpi                                 GpiCbHdl.cpp:126  in run_callback                    Generic run_callback
+  0.00ns DEBUG    ..tb.coroutine.proto.0x7f26ad6da850       decorators.py:196  in send                            Sending trigger Timer(1.00ps)
+[One Yield]
+10101
+1
+  0.00ns DEBUG    cocotb.gpi                                 GpiCbHdl.cpp:128  in run_callback                    Generic run_callback done
+  0.01ns DEBUG    cocotb.gpi                                 GpiCbHdl.cpp:126  in run_callback                    Generic run_callback
+  0.01ns DEBUG    ..tb.coroutine.proto.0x7f26ad6da850       decorators.py:196  in send                            Sending trigger Timer(1.00ps)
+[Second Yield]
+10101
+1
+
+[Looking at foo_t internal]
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:256  in __gpi_get_handle_by_name        Searching for sig_foo
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:269  in __gpi_get_handle_by_name        Checking if sig_foo native though impl VHPI
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:336  in create_gpi_obj_from_handle      Detected a STRUCTURE type coco_test.sig_foo
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:sig_foo of type 8 (vhpiRecordTypeDeclK)
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:279  in __gpi_get_handle_by_name        Found sig_foo via VHPI
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.sig_foo exists
+  0.01ns DEBUG    cocotb.sig_foo                                handle.py:92   in __init__                        Created
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:256  in __gpi_get_handle_by_name        Searching for b
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:269  in __gpi_get_handle_by_name        Checking if b native though impl VHPI
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:285  in create_gpi_obj_from_handle      Detected a LOGIC VECTOR type coco_test.sig_foo.b
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:sig_foo.b of type 5 (vhpiArrayTypeDeclK)
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:279  in __gpi_get_handle_by_name        Found b via VHPI
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.sig_foo.b exists
+  0.01ns DEBUG    cocotb.b                                      handle.py:92   in __init__                        Created
+110
+[Looking at foo_vec_t internal]
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:256  in __gpi_get_handle_by_name        Searching for sig_foov
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:269  in __gpi_get_handle_by_name        Checking if sig_foov native though impl VHPI
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:295  in create_gpi_obj_from_handle      Detected a NON-ENUM VECTOR type coco_test.sig_foov
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:sig_foov of type 6 (vhpiArrayTypeDeclK)
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:279  in __gpi_get_handle_by_name        Found sig_foov via VHPI
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.sig_foov exists
+  0.01ns DEBUG    cocotb.sig_foov                               handle.py:92   in __init__                        Created
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:347  in gpi_get_handle_by_index         Checking if index 0 native though impl VHPI 
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:553  in native_check_create             Native check create for index 0 of parent coco_test.sig_foov (vhpiSigDeclK)
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:731  in native_check_create             Index (0->0) found sig_foov(0) (vhpiIndexedNameK)
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:336  in create_gpi_obj_from_handle      Detected a STRUCTURE type coco_test.sig_foov(0)
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:sig_foov(0) of type 8 (vhpiRecordTypeDeclK)
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.sig_foov(0) exists
+  0.01ns DEBUG    cocotb.sig_foov(0)                            handle.py:92   in __init__                        Created
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:256  in __gpi_get_handle_by_name        Searching for b
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:269  in __gpi_get_handle_by_name        Checking if b native though impl VHPI
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:285  in create_gpi_obj_from_handle      Detected a LOGIC VECTOR type coco_test.sig_foov(0).b
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:sig_foov(0).b of type 5 (vhpiArrayTypeDeclK)
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:279  in __gpi_get_handle_by_name        Found b via VHPI
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.sig_foov(0).b exists
+  0.01ns DEBUG    cocotb.b                                      handle.py:92   in __init__                        Created
+110
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:256  in __gpi_get_handle_by_name        Searching for name
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:269  in __gpi_get_handle_by_name        Checking if name native though impl VHPI
+  0.01ns ERROR    cocotb.gpi                                 VhpiImpl.cpp:378  in create_gpi_obj_from_handle      Not able to map type ((null)) 0 to object
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:517  in native_check_create             Unable to fetch object coco_test.sig_foov(0).name
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:328  in gpi_get_handle_by_name          Failed to find a hdl named name via any registered implementation
+sig_foov(0)
+###### 110
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:347  in gpi_get_handle_by_index         Checking if index 0 native though impl VHPI 
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:553  in native_check_create             Native check create for index 0 of parent coco_test.sig_foov(0).b (vhpiSelectedNameK)
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:731  in native_check_create             Index (0->0) found sig_foov(0).b(0) (vhpiIndexedNameK)
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:308  in create_gpi_obj_from_handle      Detected a LOGIC type coco_test.sig_foov(0).b(0)
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:sig_foov(0).b(0) of type 5 (vhpiEnumTypeDeclK)
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.sig_foov(0).b(0) exists
+  0.01ns DEBUG    cocotb.b(0)                                   handle.py:92   in __init__                        Created
+  0 -> 1 b(0)
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:347  in gpi_get_handle_by_index         Checking if index 1 native though impl VHPI 
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:553  in native_check_create             Native check create for index 1 of parent coco_test.sig_foov(0).b (vhpiSelectedNameK)
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:731  in native_check_create             Index (1->1) found sig_foov(0).b(1) (vhpiIndexedNameK)
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:308  in create_gpi_obj_from_handle      Detected a LOGIC type coco_test.sig_foov(0).b(1)
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:sig_foov(0).b(1) of type 5 (vhpiEnumTypeDeclK)
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.sig_foov(0).b(1) exists
+  0.01ns DEBUG    cocotb.b(1)                                   handle.py:92   in __init__                        Created
+  1 -> 1 b(1)
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:347  in gpi_get_handle_by_index         Checking if index 2 native though impl VHPI 
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:553  in native_check_create             Native check create for index 2 of parent coco_test.sig_foov(0).b (vhpiSelectedNameK)
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:731  in native_check_create             Index (2->2) found sig_foov(0).b(2) (vhpiIndexedNameK)
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:308  in create_gpi_obj_from_handle      Detected a LOGIC type coco_test.sig_foov(0).b(2)
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:sig_foov(0).b(2) of type 5 (vhpiEnumTypeDeclK)
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.sig_foov(0).b(2) exists
+  0.01ns DEBUG    cocotb.b(2)                                   handle.py:92   in __init__                        Created
+  2 -> 0 b(2)
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:347  in gpi_get_handle_by_index         Checking if index 1 native though impl VHPI 
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:553  in native_check_create             Native check create for index 1 of parent coco_test.sig_foov (vhpiSigDeclK)
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:731  in native_check_create             Index (1->1) found sig_foov(1) (vhpiIndexedNameK)
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:336  in create_gpi_obj_from_handle      Detected a STRUCTURE type coco_test.sig_foov(1)
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:sig_foov(1) of type 8 (vhpiRecordTypeDeclK)
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.sig_foov(1) exists
+  0.01ns DEBUG    cocotb.sig_foov(1)                            handle.py:92   in __init__                        Created
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:256  in __gpi_get_handle_by_name        Searching for name
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:269  in __gpi_get_handle_by_name        Checking if name native though impl VHPI
+  0.01ns ERROR    cocotb.gpi                                 VhpiImpl.cpp:378  in create_gpi_obj_from_handle      Not able to map type ((null)) 0 to object
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:517  in native_check_create             Unable to fetch object coco_test.sig_foov(1).name
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:328  in gpi_get_handle_by_name          Failed to find a hdl named name via any registered implementation
+sig_foov(1)
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:256  in __gpi_get_handle_by_name        Searching for b
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:269  in __gpi_get_handle_by_name        Checking if b native though impl VHPI
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:285  in create_gpi_obj_from_handle      Detected a LOGIC VECTOR type coco_test.sig_foov(1).b
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:sig_foov(1).b of type 5 (vhpiArrayTypeDeclK)
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:279  in __gpi_get_handle_by_name        Found b via VHPI
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.sig_foov(1).b exists
+  0.01ns DEBUG    cocotb.b                                      handle.py:92   in __init__                        Created
+###### 011
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:347  in gpi_get_handle_by_index         Checking if index 0 native though impl VHPI 
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:553  in native_check_create             Native check create for index 0 of parent coco_test.sig_foov(1).b (vhpiSelectedNameK)
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:731  in native_check_create             Index (0->0) found sig_foov(1).b(0) (vhpiIndexedNameK)
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:308  in create_gpi_obj_from_handle      Detected a LOGIC type coco_test.sig_foov(1).b(0)
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:sig_foov(1).b(0) of type 5 (vhpiEnumTypeDeclK)
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.sig_foov(1).b(0) exists
+  0.01ns DEBUG    cocotb.b(0)                                   handle.py:92   in __init__                        Created
+  0 -> 0 b(0)
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:347  in gpi_get_handle_by_index         Checking if index 1 native though impl VHPI 
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:553  in native_check_create             Native check create for index 1 of parent coco_test.sig_foov(1).b (vhpiSelectedNameK)
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:731  in native_check_create             Index (1->1) found sig_foov(1).b(1) (vhpiIndexedNameK)
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:308  in create_gpi_obj_from_handle      Detected a LOGIC type coco_test.sig_foov(1).b(1)
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:sig_foov(1).b(1) of type 5 (vhpiEnumTypeDeclK)
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.sig_foov(1).b(1) exists
+  0.01ns DEBUG    cocotb.b(1)                                   handle.py:92   in __init__                        Created
+  1 -> 1 b(1)
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:347  in gpi_get_handle_by_index         Checking if index 2 native though impl VHPI 
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:553  in native_check_create             Native check create for index 2 of parent coco_test.sig_foov(1).b (vhpiSelectedNameK)
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:731  in native_check_create             Index (2->2) found sig_foov(1).b(2) (vhpiIndexedNameK)
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:308  in create_gpi_obj_from_handle      Detected a LOGIC type coco_test.sig_foov(1).b(2)
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:sig_foov(1).b(2) of type 5 (vhpiEnumTypeDeclK)
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.sig_foov(1).b(2) exists
+  0.01ns DEBUG    cocotb.b(2)                                   handle.py:92   in __init__                        Created
+  2 -> 1 b(2)
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:347  in gpi_get_handle_by_index         Checking if index 2 native though impl VHPI 
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:553  in native_check_create             Native check create for index 2 of parent coco_test.sig_foov (vhpiSigDeclK)
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:731  in native_check_create             Index (2->2) found sig_foov(2) (vhpiIndexedNameK)
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:336  in create_gpi_obj_from_handle      Detected a STRUCTURE type coco_test.sig_foov(2)
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:sig_foov(2) of type 8 (vhpiRecordTypeDeclK)
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.sig_foov(2) exists
+  0.01ns DEBUG    cocotb.sig_foov(2)                            handle.py:92   in __init__                        Created
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:256  in __gpi_get_handle_by_name        Searching for name
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:269  in __gpi_get_handle_by_name        Checking if name native though impl VHPI
+  0.01ns ERROR    cocotb.gpi                                 VhpiImpl.cpp:378  in create_gpi_obj_from_handle      Not able to map type ((null)) 0 to object
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:517  in native_check_create             Unable to fetch object coco_test.sig_foov(2).name
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:328  in gpi_get_handle_by_name          Failed to find a hdl named name via any registered implementation
+sig_foov(2)
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:256  in __gpi_get_handle_by_name        Searching for b
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:269  in __gpi_get_handle_by_name        Checking if b native though impl VHPI
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:285  in create_gpi_obj_from_handle      Detected a LOGIC VECTOR type coco_test.sig_foov(2).b
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:sig_foov(2).b of type 5 (vhpiArrayTypeDeclK)
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:279  in __gpi_get_handle_by_name        Found b via VHPI
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.sig_foov(2).b exists
+  0.01ns DEBUG    cocotb.b                                      handle.py:92   in __init__                        Created
+###### 100
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:347  in gpi_get_handle_by_index         Checking if index 0 native though impl VHPI 
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:553  in native_check_create             Native check create for index 0 of parent coco_test.sig_foov(2).b (vhpiSelectedNameK)
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:731  in native_check_create             Index (0->0) found sig_foov(2).b(0) (vhpiIndexedNameK)
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:308  in create_gpi_obj_from_handle      Detected a LOGIC type coco_test.sig_foov(2).b(0)
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:sig_foov(2).b(0) of type 5 (vhpiEnumTypeDeclK)
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.sig_foov(2).b(0) exists
+  0.01ns DEBUG    cocotb.b(0)                                   handle.py:92   in __init__                        Created
+  0 -> 1 b(0)
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:347  in gpi_get_handle_by_index         Checking if index 1 native though impl VHPI 
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:553  in native_check_create             Native check create for index 1 of parent coco_test.sig_foov(2).b (vhpiSelectedNameK)
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:731  in native_check_create             Index (1->1) found sig_foov(2).b(1) (vhpiIndexedNameK)
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:308  in create_gpi_obj_from_handle      Detected a LOGIC type coco_test.sig_foov(2).b(1)
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:sig_foov(2).b(1) of type 5 (vhpiEnumTypeDeclK)
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.sig_foov(2).b(1) exists
+  0.01ns DEBUG    cocotb.b(1)                                   handle.py:92   in __init__                        Created
+  1 -> 0 b(1)
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:347  in gpi_get_handle_by_index         Checking if index 2 native though impl VHPI 
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:553  in native_check_create             Native check create for index 2 of parent coco_test.sig_foov(2).b (vhpiSelectedNameK)
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:731  in native_check_create             Index (2->2) found sig_foov(2).b(2) (vhpiIndexedNameK)
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:308  in create_gpi_obj_from_handle      Detected a LOGIC type coco_test.sig_foov(2).b(2)
+  0.01ns DEBUG    cocotb.gpi                                 VhpiImpl.cpp:388  in create_gpi_obj_from_handle      Creating :coco_test:sig_foov(2).b(2) of type 5 (vhpiEnumTypeDeclK)
+  0.01ns DEBUG    cocotb.gpi                                GpiCommon.cpp:50   in check_and_store                 Checking coco_test.sig_foov(2).b(2) exists
+  0.01ns DEBUG    cocotb.b(2)                                   handle.py:92   in __init__                        Created
+  2 -> 0 b(2)
+
+  0.01ns DEBUG    cocotb.scheduler                           scheduler.py:474  in schedule                        TestComplete received: TestSuccess
+  0.01ns DEBUG    cocotb.scheduler                           scheduler.py:526  in finish_test                     finish_test called with TestSuccess()
+  0.01ns DEBUG    cocotb.gpi                                 GpiCbHdl.cpp:128  in run_callback                    Generic run_callback done
+  0.01ns DEBUG    cocotb.gpi                                 GpiCbHdl.cpp:126  in run_callback                    Generic run_callback
+  0.01ns INFO     cocotb.regression                         regression.py:223  in handle_result                   Test Passed: proto
+  0.01ns INFO     cocotb.regression                         regression.py:176  in tear_down                       Passed 1 tests (0 skipped)
+  0.01ns INFO     cocotb.regression                         regression.py:341  in _log_test_summary               ********************************************************************
+                                                                                                                  ** TEST        PASS/FAIL  SIM TIME(NS)  REAL TIME(S)  RATIO(NS/S) **
+                                                                                                                  ********************************************************************
+                                                                                                                  ** test.proto    PASS            0.01          0.07         0.09  **
+                                                                                                                  ********************************************************************
+                                                                                                                  
+  0.01ns INFO     cocotb.regression                         regression.py:358  in _log_sim_summary                *************************************************************************************
+                                                                                                                  **                                 ERRORS : 0                                      **
+                                                                                                                  *************************************************************************************
+                                                                                                                  **                               SIM TIME : 0.01 NS                                **
+                                                                                                                  **                              REAL TIME : 0.08 S                                 **
+                                                                                                                  **                        SIM / REAL TIME : 0.08 NS/S                              **
+                                                                                                                  *************************************************************************************
+                                                                                                                  
+  0.01ns INFO     cocotb.regression                         regression.py:184  in tear_down                       Shutting down...
+  0.01ns DEBUG    cocotb.gpi                                 GpiCbHdl.cpp:128  in run_callback                    Generic run_callback done
+# RUNTIME: Info: RUNTIME_0142 finish called.
+# KERNEL: Time: 6 ps,  Iteration: 0,  TOP instance.
+# KERNEL: stopped at time: 6 ps
+# VSIM: Simulation has finished. There are no more test vectors to simulate.
+transcript off
+# off
+# on
+quit
+# VSIM: Simulation has finished.
+[DEFAULT]
+script = test
+toplevel = coco_test
+toplevel_lib = aldec_lib
+architecture = rtl
+toplevel_lang = vhdl
+
+[VHDL]
+latch = /aha/users/j6013/coco_testing/arrays_and_records/latched_vhdl
+libpath = $PROJECT_HW_WD/rx_path_m0/tb/rx_path_t0/latched_vhdl/modem/hw/rx_path_m0/vhdl_lib
+
+Warning, cannot locate verify script in  ['./verify', '../common/verify']
+Using results.xml instead.
+test [32mPassed[0m
